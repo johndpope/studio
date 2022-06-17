@@ -67,7 +67,7 @@ fn tixy(
         // Tweak the radius given by the model.
         //let radius = target.norm()*1.0*0.125;
         //let radius = radius.min(max_radius);
-        let range = 2.0;
+        let range = 3.0;
         let length = target.norm().min(range)/range;
         let radius = length*max_radius;
         // For now, just draw a circle.
@@ -81,8 +81,8 @@ fn tixy(
 
 // TODO: think of a better api for drawing
 pub fn draw_sketch_2022_06_16() {
-  let width = 1024;
-  let height = 1024;
+  let width = 256;
+  let height = 256;
   let ww = width as num * 0.5;
   let hh = height as num * 0.5;
   let length = 6.0;
