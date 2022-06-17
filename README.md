@@ -2,6 +2,12 @@ art & language
 
 ---
 
+**2022-06-17** i love the ["rulial space
+program"](https://writings.stephenwolfram.com/2022/06/alien-intelligence-and-the-concept-of-technology/)
+image, and i feel like [this description of
+games](https://writings.stephenwolfram.com/2022/06/games-and-puzzles-as-multicomputational-systems/)
+validates my interest in computability logic and game semantics.
+
 **2022-06-16** i think transformer sequence models are simple,
 intuitive, and universal, so i want to try to use them for generative
 art. i think i can train really small transformers on stuff like
