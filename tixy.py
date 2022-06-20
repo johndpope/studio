@@ -10,34 +10,6 @@ tau = 2*math.pi
 def debug(*args, **kwargs):
   print(*args, file=sys.stderr, **kwargs)
 
-def relu(x):
-  return np.maximum(x, 0)
-
-def softmax(x):
-  return np.exp(x)/sum(np.exp(x))
-
-class RandomResNet:
-  map_fst: np.ndarray
-  map_snd: np.ndarray
-  add_fst: np.ndarray
-  add_snd: np.ndarray
-
-  def __init__(self, dim: int):
-    rng = np.random.default_rng()
-    self.map_fst = rng.standard_normal((dim, dim))
-    self.map_snd = rng.standard_normal((dim, dim))
-    self.add_fst = rng.standard_normal(dim)
-    self.add_snd = rng.standard_normal(dim)
-
-  def eval(self, value):
-    residual = np.dot(self.map_fst, value)+self.add_fst
-    residual = relu(residual)
-    value = value + residual
-    residual = np.dot(self.map_snd, value)+self.add_snd    
-    residual = relu(residual)
-    value = value + residual
-    return value
-
 # Application parameters.
 dspw = 256
 dsph = 256
@@ -96,7 +68,7 @@ def clock(time: float):
   return np.array(value)
 
 def draw_color_field(
-    model: RandomResNet,
+    model,
     time: np.ndarray,
     origin: np.ndarray,
     ctx: cairo.Context,
@@ -116,9 +88,12 @@ def draw_color_field(
       ctx.fill()
 
 # Application state.
-img = cairo.ImageSurface(cairo.FORMAT_ARGB32, dspw, dsph)
-ctx = cairo.Context(img)
+from random_resnet import RandomResNet
 model = RandomResNet(dim=2+2+2)
+
+img = cairo.ImageSurface(
+  cairo.FORMAT_ARGB32, dspw, dsph)
+ctx = cairo.Context(img)
 frame = 0
 
 while frame < frame_count:
