@@ -1,0 +1,22 @@
+[project]
+name = "dalle-mini-util"
+version = "0.0.1"
+authors = [
+  { name="Madison Brooks", email="maddie@0xmaddie.page" },
+]
+description = "Utilities for working with DALL-E Mini."
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+  "pycairo",
+  "numpy",
+  "jax",
+  "jaxlib",
+  "flax",
+  "dalle-mini",
+  "vqgan-jax @ git+https://github.com/patil-suraj/vqgan-jax.git",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

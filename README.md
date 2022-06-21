@@ -2,6 +2,20 @@ art & language
 
 ---
 
+**2022-06-21** id like to try something like [language model
+evolution](https://arxiv.org/abs/2206.08896) with dalle mini. rn my
+idea is a domain specific language for signal processing, embedded in
+python, using dalle as some type of intelligent library.
+
+one thing i want to think about is how to use dalle for generic image
+processing tasks, rather than only open-ended image
+generation. openais dalle2 is already being used to edit images, so
+there should be a way to do something similar with dalle mini.
+
+i think markov algorithms are a good paradigm for the embedded
+language. [markovjunior](https://github.com/mxgmn/MarkovJunior) is a
+recent project that i liked a lot.
+
 **2022-06-20** i started working on utility code for dalle mini. also
 a really cool paper called [evolution through large
 models](https://arxiv.org/abs/2206.08896) just dropped and id like to
