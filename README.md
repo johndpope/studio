@@ -2,6 +2,11 @@ art & language
 
 ---
 
+**2022-06-20** i started working on utility code for dalle mini. also
+a really cool paper called [evolution through large
+models](https://arxiv.org/abs/2206.08896) just dropped and id like to
+try some of that with gpt3 and python.
+
 **2022-06-17** i love the ["rulial space
 program"](https://writings.stephenwolfram.com/2022/06/alien-intelligence-and-the-concept-of-technology/)
 image, and i feel like [this description of
