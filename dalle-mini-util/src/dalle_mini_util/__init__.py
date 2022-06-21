@@ -24,13 +24,11 @@ def make_image_grid(images):
   rows = cols = math.floor(len(images)**0.5)
   width, height = images[0].size
   grid = Image.new('RGB', size=(cols*width, rows*height))
-  image_index = len(images)-1
   for row in range(0, rows):
-    y = (rows-row-1)*height
+    y = row*height
     for col in range(0, cols):
-      x = (cols-col-1)*width
-      image = images[image_index]
-      image_index -= 1
+      x = col*width
+      image = images[y*cols+x]
       grid.paste(image, box=(x, y))
   return grid
 
@@ -131,7 +129,7 @@ class TextToImageModel:
       pixel_batch = pixel_batch.clip(0, 1)
       pixel_batch = pixel_batch.reshape((-1, 256, 256, 3))
 
-      # Convert pixel tensors to PIL images and display them.
+      # Convert pixel tensors to PIL images.
       for pixels in pixel_batch:
         buf = np.asarray(pixels*255, dtype=np.uint8)
         image = Image.fromarray(buf)
