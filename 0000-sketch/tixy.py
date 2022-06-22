@@ -5,6 +5,8 @@ import math
 import numpy as np
 import cairo
 
+from sketch.random_resnet import RandomResNet
+
 tau = 2*math.pi
 
 def debug(*args, **kwargs):
@@ -88,7 +90,6 @@ def draw_color_field(
       ctx.fill()
 
 # Application state.
-from random_resnet import RandomResNet
 model = RandomResNet(dim=2+2+2)
 
 img = cairo.ImageSurface(
