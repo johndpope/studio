@@ -2,6 +2,12 @@ art & language
 
 ---
 
+**2022-06-23** i wanna make toy neural nets. it would be cool to use
+language model evolution for neural architecture search. also i wanna
+make a "foundation model" for a fantasy console like [pico
+8](https://www.lexaloffle.com/pico-8.php) or even
+[orca](https://wiki.xxiivv.com/site/orca.html).
+
 **2022-06-21** id like to try something like [language model
 evolution](https://arxiv.org/abs/2206.08896) with dalle mini. rn my
 idea is a domain specific language for signal processing, embedded in
