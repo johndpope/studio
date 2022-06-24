@@ -28,7 +28,7 @@ def make_image_grid(images):
     y = row*height
     for col in range(0, cols):
       x = col*width
-      image = images[y*cols+x]
+      image = images[row*cols+col]
       grid.paste(image, box=(x, y))
   return grid
 
